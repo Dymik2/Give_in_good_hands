@@ -1,0 +1,28 @@
+$background: #FFFFFF;
+$background_contact: #FFFFFFC9;
+$background_section: #F0F1F1;
+$background_section_statistic: #FAD648;
+$color_text:#3C3C3C;
+$color_bottom_contact: #000000;
+$color_form:#3C3C3C26;
+$color_underline: #707070;
+$color_number: #5E5322;
+$border_bottom: #00000000;
+$bottom_header: #737373;
+$color_decoration:#1A1818;
+
+
+:export {
+    background: $background;
+    background_contact: $background_contact;
+    background_section: $background_section;
+    background_section_statistic: $background_section_statistic;
+    color_text: $color_text;
+    color_bottom_contact: $color_bottom_contact;
+    color_form: $color_form;
+    color_underline: $color_underline;
+    color_number: $color_number;
+    border_bottom: $border_bottom;
+    bottom_header: $bottom_header;
+    color_decoration: $color_decoration;
+  }
