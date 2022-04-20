@@ -1,0 +1,14 @@
+.homeHeaderDown{
+    text-align: right;
+    padding: 20px 0;
+    .homeHeaderDownLink{
+        margin-left: 30px;
+        font-family: $font-base;
+        color: $color_text;
+        font-size: 18px;
+    }
+    .homeHeaderDownLink:hover{
+        cursor: pointer;
+       color: $border_bottom;
+    }
+}

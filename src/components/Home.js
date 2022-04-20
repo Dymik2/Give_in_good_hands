@@ -7,13 +7,28 @@ import HomeThreeColumns from './HomeThreeColumns';
 import HowToDoIt from './HowToDoIt';
 import Organisation from './Organisation';
 import HomeHeaderDown from './HomeHeaderDown';
+import heroimage from "../assets/heroimage.png";
 
 const Home = () => {
     return (
-        <div>
-            <HomeHeader />
-            <HomeHeaderDown />
-            <HomeStart />
+        <div className='home'>
+            <div className='mainSection'>
+                <img src={heroimage} alt="tutaj coś powinno być" />
+                <header className='header'>
+                    <HomeHeader />
+                    <HomeHeaderDown />
+                    <HomeStart />
+                </header>
+            </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             <HomeThreeColumns />
             <HowToDoIt />
             <AboutUs />

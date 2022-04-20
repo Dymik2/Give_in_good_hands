@@ -1,0 +1,49 @@
+#homeStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 80%;
+
+    .title{
+       font-family: $font-base;
+       font-size: 28px;
+       color: $color_text;
+       h2{
+           display: block;
+           width: auto;
+           margin-bottom: 15px;
+       }
+       h2:first-of-type{
+        text-align: center;
+       }
+       img{
+           width: 100%;
+        text-align: center;
+       }
+    }
+
+    .links{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 40px;
+        .link{
+            font-family: $font-base;
+            color: $color_text;
+            width: 20%;
+            font-size: 24px;
+            text-decoration: none;
+            text-align: center;
+            padding: 20px 30px;
+            margin-right: 30px;
+            margin-left: 30px;
+            border: 0.75px solid #3C3C3C;
+        }
+        .link:hover{
+            color: $border_bottom;
+            border: 0.75px solid $border_bottom;
+        }
+    }
+}

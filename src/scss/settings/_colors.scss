@@ -1,13 +1,13 @@
 $background: #FFFFFF;
 $background_contact: #FFFFFFC9;
 $background_section: #F0F1F1;
-$background_section_statistic: #FAD648;
+$background_section_statistic_border: #FAD648;
 $color_text:#3C3C3C;
 $color_bottom_contact: #000000;
 $color_form:#3C3C3C26;
 $color_underline: #707070;
 $color_number: #5E5322;
-$border_bottom: #00000000;
+$border_bottom: #000000;
 $bottom_header: #737373;
 $color_decoration:#1A1818;
 
@@ -16,7 +16,7 @@ $color_decoration:#1A1818;
     background: $background;
     background_contact: $background_contact;
     background_section: $background_section;
-    background_section_statistic: $background_section_statistic;
+    background_section_statistic_border: $background_section_statistic_border;
     color_text: $color_text;
     color_bottom_contact: $color_bottom_contact;
     color_form: $color_form;

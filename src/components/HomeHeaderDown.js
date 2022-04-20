@@ -4,8 +4,8 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 const HomeHeaderDown = () => {
     return (
-        <div>
-            <Link
+        <div className='homeHeaderDown'>
+            <Link className='homeHeaderDownLink'
                 activeClass="active"
                 to="homeStart"
                 spy={true}
@@ -13,7 +13,7 @@ const HomeHeaderDown = () => {
                 offset={-70}
                 duration={500}
             >Start</Link>
-            <Link
+            <Link className='homeHeaderDownLink'
                 activeClass="active"
                 to="homeThreeColumns"
                 spy={true}
@@ -21,7 +21,7 @@ const HomeHeaderDown = () => {
                 offset={-70}
                 duration={500}
             >O co chodzi?</Link>
-            <Link
+            <Link className='homeHeaderDownLink'
                 activeClass="active"
                 to="aboutUs"
                 spy={true}
@@ -29,22 +29,22 @@ const HomeHeaderDown = () => {
                 offset={-70}
                 duration={500}
             >O nas</Link>
-            <Link
+            <Link className='homeHeaderDownLink'
                 activeClass="active"
                 to="organisation"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-            >Organisation</Link>
-            <Link
+            >Fundacje i Organizacje</Link>
+            <Link className='homeHeaderDownLink'
                 activeClass="active"
                 to="contact"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-            >Contact</Link>
+            >Kontakt</Link>
         </div>
     );
 }
