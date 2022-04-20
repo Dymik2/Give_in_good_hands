@@ -7,10 +7,11 @@ const HomeHeaderDown = () => {
         <div className='homeHeaderDown'>
             <Link className='homeHeaderDownLink'
                 activeClass="active"
-                to="homeStart"
+                // to="homeStart"
+                to="#"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                // offset={-70}
                 duration={500}
             >Start</Link>
             <Link className='homeHeaderDownLink'

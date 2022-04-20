@@ -1,9 +1,15 @@
 @import "utilities/reset";
+
 @import "settings/fonts";
 @import "settings/colors";
+
 @import "components/index";
 @import "components/App";
 @import "components/home";
 @import "components/homeHeader";
 @import "components/homeHeaderDown";
 @import "components/homeStart";
+@import "components/homeThreeColumns";
+@import "components/howToDoIt";
+@import "components/aboutUs";
+@import "components/contact";

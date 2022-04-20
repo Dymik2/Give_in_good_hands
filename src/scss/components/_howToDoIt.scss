@@ -1,0 +1,85 @@
+.howToDoIt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    padding: 50px 0;
+
+    .title{
+        text-align: center;
+        h2{
+            font-family: $font-base;
+            font-size: 38px;
+            color: $color_text;
+        }
+        img{
+            margin: 30px 0;
+        }
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+        width: 100%;
+        background-color: $background_section;
+        .containerSteps{
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            img{
+                height: 5rem;
+                width: auto;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            h4{
+                display: block;
+                font-family: $font-base;
+                font-size: 18px;
+                color: $color_text;
+                margin: 10px 0;
+            }
+            h5{
+                display: block;
+                width: 50%;
+                height: 3px;
+                background-color: $color_text;
+                border-radius: 8px;
+                margin: 10px 0;
+            }
+            p{
+                display: block;
+                font-family: $font-base;
+                font-size: 16px;
+                color: $color_text;
+                margin: 10px 0;
+            }
+        }
+        
+    }
+
+    .link{
+        font-family: $font-base;
+        color: $color_text;
+        width: 120px;
+        font-size: 24px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1.5;
+        padding: 10px 50px;
+        margin-top: 30px;
+        border: 0.75px solid #3C3C3C;
+    }
+    .link:hover{
+        color: $border_bottom;
+        border: 0.75px solid $border_bottom;
+    }
+}

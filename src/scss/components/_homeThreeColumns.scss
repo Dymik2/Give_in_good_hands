@@ -1,0 +1,36 @@
+#homeThreeColumns{
+    display: flex;
+    justify-content: space-around;
+    background-color: $background_section_statistic_border;
+    padding: 40px 0;
+    max-width: 1600px;
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 40px;
+        h2{
+            font-family: $font-base;
+            font-size: 90px;
+            font-weight: 300;
+            color: $color_number;
+        }
+        h4{
+            font-family: $font-base;
+            font-size: 18px;
+            font-weight: 400;
+            color: $color_text;
+            margin: 20px 0 20px;
+            text-transform: uppercase;
+        }
+        p{
+            text-align: center;
+            font-family: $font-alt;
+            font-size: 16px;
+            font-weight: 300;
+            color: $color_text;
+            line-height: 2;
+        }
+    }
+}

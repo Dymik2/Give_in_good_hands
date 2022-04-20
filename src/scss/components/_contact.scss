@@ -1,0 +1,11 @@
+#contact{
+    height: 50vh;
+    width: 100%;
+    max-width: 1600px;
+    background-image: url("../../assets/Background\ Image.png");
+    .mainContact{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
