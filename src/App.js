@@ -6,9 +6,13 @@ import './scss/main.scss';
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import { useDispatch } from 'react-redux';
+import { addUser } from './actions/appActions'
 
 function App() {
+  const dispatch = useDispatch();
   return <HashRouter>
+    <button onClick={() => dispatch(addUser({ email: "ddd", password: "555" }))}>add user</button>
     <Routes >
       <Route exact path='/' element={<Home />} />
       <Route exact path='/login' element={<Login />} />

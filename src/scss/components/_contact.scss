@@ -1,11 +1,99 @@
 #contact{
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 70vh;
     width: 100%;
     max-width: 1600px;
-    background-image: url("../../assets/Background\ Image.png");
+   
     .mainContact{
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        div.contact{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            margin-top: 120px;
+            
+            h2{
+                font-family: $font-base;
+                font-size: 38px;
+                color: $color-text;
+            }
+            img{
+                margin: 20px 0 40px;
+                width: 35%;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        .data{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;            
+        }
+        label{
+            display: flex;
+            flex-direction: column;
+            font-family: $font-base;
+            font-size: 16px;
+            color: $color-text;
+            margin-left: 20px;
+            margin-bottom: 40px;
+        }
+        input{
+            font-family: $font-base;
+            font-size: 16px;
+            color: $color-text;
+            border: none;
+            border-bottom: 1px solid $color-text;
+        }
     }
+    footer{
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        p{
+            position: absolute;
+            left: 50%;
+            bottom: -25px;
+            transform: translateX(-50%);
+            font-family: $font-base;
+            color: $color-text;
+            font-size: 18px;
+        }
+        div{
+            position: absolute;
+            right:10%;
+        }
+        img{
+            margin-left: 20px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+#contact::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url("../../assets/Background\ Image.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
 }

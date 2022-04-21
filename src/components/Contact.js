@@ -8,13 +8,28 @@ const Contact = () => {
     return (
         <div id="contact">
             <div className='mainContact'>
-                <h2>Skontaktuj się z nami</h2>
-                <img src={decoration} alt="" />
-                <form action="">
-                    <input type="text" />
-                    <input type="text" />
-                    <input type="text" />
-                </form>
+                <div className='contact'>
+                    <h2>Skontaktuj się z nami</h2>
+                    <img src={decoration} alt="" />
+                    <form action="">
+                        <div className='data'>
+                            <label htmlFor="">Wpisz swoje imie
+                                <input type="text" />
+                            </label>
+                            <label htmlFor="">
+                                Wpisz swoje email
+                                <input type="text" />
+                            </label>
+                        </div>
+                        <div className='comment'>
+                            <label htmlFor="">
+                                Wpisz swoją wiadomość
+                                <input type="textarea" />
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
             </div>
             <footer>
                 <p>Copyright by Coderslab</p>
