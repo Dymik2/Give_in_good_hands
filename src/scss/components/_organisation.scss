@@ -1,0 +1,41 @@
+#organisation{
+    .desctription{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 35px 0;
+    }
+    h2{
+       font-family: $font-base;
+       font-size: 38px;
+       color: $color_text;
+    }
+    img{
+        margin: 30px 0;
+    }
+    .buttons{
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        button{
+            font-family: $font-base;
+            font-size: 24px;
+            color: $color-text;
+            background-color: $background;
+            border: none;
+            margin: 0 25px;
+            width: 200px;
+        }
+        button:hover{
+            cursor: pointer;
+            color:$color-hover;
+        }
+    }
+    p{
+        width: 50%;
+        font-family: $font-base;
+        color: $color-text;
+        font-size: 22px;
+    }
+}

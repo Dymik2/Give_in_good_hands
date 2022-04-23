@@ -1,19 +1,15 @@
 import React from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Link as LinkDom } from 'react-router-dom';
 
 
 const HomeHeaderDown = () => {
+
     return (
         <div className='homeHeaderDown'>
-            <Link className='homeHeaderDownLink'
-                activeClass="active"
-                // to="homeStart"
-                to="#"
-                spy={true}
-                smooth={true}
-                // offset={-70}
-                duration={500}
-            >Start</Link>
+            <LinkDom className='homeHeaderDownLink'
+                to="/"
+            >Start</LinkDom>
             <Link className='homeHeaderDownLink'
                 activeClass="active"
                 to="homeThreeColumns"

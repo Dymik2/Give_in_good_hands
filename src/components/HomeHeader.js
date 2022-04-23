@@ -9,8 +9,8 @@ const HomeHeader = () => {
     return (
         <div className='homeHeaderMenu'>
             {app.length && <p>{app[0].email}</p>}
-            <Link className='linkHeader' to="/login">Login</Link>
-            <Link className='linkHeader' to="/register">Register</Link>
+            <Link className='linkHeader' to="/login">Zaloguj</Link>
+            <Link className='linkHeader' to="/register">Zarejestruj</Link>
         </div>
     );
 }

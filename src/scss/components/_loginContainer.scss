@@ -1,0 +1,78 @@
+.loginContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginHeader{
+    width: 100%;
+    max-width: 1600px;
+    margin-right: 220px;
+}
+
+.loginForm{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 70vh;
+width: 600px;
+// background-color: red;
+    h2{
+        font-family: $font_base;
+        font-size: 40px;
+        color: $color-text;
+    }
+    img{
+        margin: 30px 0;
+    }
+    .inputs{
+        background-color: $background_section;
+        width: 60%;
+        padding: 10px 60px;
+        .label{
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 30px 0;
+            font-family: $font-base;
+            font-weight: 600;
+            font-size: 16px;
+            color: $color-text;
+        }
+        input{
+            background-color: $background_section;
+            font-family: $font-base;
+            font-size: 16px;
+            color: $color-text;
+            padding-top: 10px;
+            border: none;
+            width: 100%;
+            border-bottom: 1px solid $color-text;
+        }
+    }
+    .buttonsLogin{
+        width: 100%;
+        margin: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        .linkLogin{
+            display: block;
+            font-family: $font-base;
+            font-size: 18px;
+            color: $color-text;
+            text-decoration: none;
+            padding: 15px 15px;
+            background-color:$background;
+        }
+
+        .linkLogin:last-of-type{
+            border: 0.75px solid $color-text;
+        }
+
+        .linkLogin:hover{
+            color: black;
+        }
+    }
+}
