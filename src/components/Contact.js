@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../scss/main.scss';
 import { useForm } from "react-hook-form";
 import instagram from "../assets/Instagram.png";
 import facebook from "../assets/Facebook.png";
 import decoration from "../assets/Decoration.svg";
+import { API_URL } from "../api/constants";
 
 const Contact = () => {
-
+    const [showSend, setShowSend] = useState(false);
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => {
+        fetch(`${API_URL}/tasks`, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(r => r.json())
+            .then(data => {
+                setShowSend(true);
+                console.log("Done");
+            })
+            .catch(err => console.log(err));
+    };
 
     return (
         <div id="contact">
@@ -20,11 +35,12 @@ const Contact = () => {
                 <div className='contact'>
                     <h2>Skontaktuj się z nami</h2>
                     <img src={decoration} alt="" />
+                    {showSend && <p className='sendMessage'>Wiadomość została wysłana. <br /> Wkrótce się z tobą skontaktujemy</p>}
                     <form action="" onSubmit={handleSubmit(onSubmit)}>
                         <div className='data'>
                             <label htmlFor="">Wpisz swoje imie
-                                <input type="text" {...register("name", { required: true, minLength: 8 })} />
-                                {errors.name?.type === 'required' && <p style={{ color: "red" }}>Imie jest wymagany</p>}
+                                <input type="text" {...register("name", { required: true, minLength: 2 })} />
+                                {errors.name?.type === 'required' && <p style={{ color: "red" }}>Imie jest wymagane</p>}
                                 {errors.name?.type === 'minLength' && <p style={{ color: "red" }}>Minimalna długość to 2 znaki</p>}
                             </label>
 

@@ -5,16 +5,23 @@ import '../scss/main.scss';
 import decoration from "../assets/Decoration.svg";
 import HomeHeader from "./HomeHeader";
 import HomeHeaderDown from './HomeHeaderDown';
+import { useDispatch } from 'react-redux';
+import { logUser } from '../Redux/actions/logActions'
+import { useNavigate } from 'react-router-dom'
 
-
-const Login = () => {
-
+const Login = ({ loginUser }) => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => {
+        dispatch(logUser({ email: data.email, password: data.password }))
+        loginUser();
+        navigate("/");
+    };
 
     return (
         <div className='loginContainer'>
@@ -41,7 +48,6 @@ const Login = () => {
                 </div>
                 <div className='buttonsLogin'>
                     <Link className='linkLogin' to="/register">Załóż konto</Link>
-                    {/* <Link className='linkLogin' to="/">Zaloguj się</Link> */}
                     <button className='linkLogin' type="submit">Zaloguj</button>
                 </div>
             </form>

@@ -5,14 +5,25 @@ import { useForm } from "react-hook-form";
 import decoration from "../assets/Decoration.svg";
 import HomeHeader from "./HomeHeader";
 import HomeHeaderDown from './HomeHeaderDown';
+import { useDispatch } from 'react-redux';
+import { addUser, deleteUser } from '../Redux/actions/appActions'
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
-const Register = () => {
+const Register = ({ registerUser }) => {
+    const { app } = useSelector(state => state);
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = async (data) => {
+
+        await registerUser({ email: data.email, password: data.password });
+        //  navigate("/login");
+    }
 
     return (
         <div className='registerContainer'>
@@ -21,7 +32,7 @@ const Register = () => {
                 <HomeHeaderDown />
             </div>
             <form className='registerForm' onSubmit={handleSubmit(onSubmit)}>
-                <h2>Zaloguj się</h2>
+                <h2>Zarejestruj się</h2>
                 <img src={decoration} alt="" />
                 <div className='inputs'>
                     <label htmlFor="" className='label'>

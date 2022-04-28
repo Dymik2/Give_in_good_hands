@@ -1,0 +1,56 @@
+.mainDivForm{
+    background-image: url("../../assets/Header-Form-Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    width: 100%;
+    max-width: 1600px;
+    padding: 80px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: $color-text;
+    .leftContainer{
+        width: 50%;
+    }
+    h2{
+        font-family: $font-base;
+        font-size: 38px;
+       
+    span{
+        display: block;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+    }
+    img{
+        margin: 20px 0;
+    }
+    p{
+        font-family: $font-base;
+        font-size: 40px;
+        font-weight: 300;
+
+    }
+    .containerRotateDiv{
+        margin: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .rotateDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        transform: rotate(45deg);
+        border: 1px solid $color-text;
+        width: 80px;
+        height: 80px;
+        p{
+            transform: rotate(-45deg);
+            font-size: 15px;
+        }
+    }
+}

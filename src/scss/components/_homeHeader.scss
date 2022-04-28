@@ -1,6 +1,21 @@
 .homeHeaderMenu{
     text-align: right;
     padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    .buttonHeader{
+        text-decoration: none;
+        color: $bottom_header;
+        font-family: $font-base;
+        font-size: 14px;
+        padding: 10px 5px;
+        margin-left: 20px;
+        font-weight: normal;
+        border: none;
+        background-color: $background;
+    }
     .linkHeader{
         text-decoration: none;
         color: $bottom_header;
@@ -12,6 +27,9 @@
     }
     .linkHeader:last-of-type{
         border: 2px solid $background_section_statistic_border;
+    }
+    .buttonHeader:hover{
+        color: $border_bottom;
     }
     .linkHeader:hover{
         color: $border_bottom;

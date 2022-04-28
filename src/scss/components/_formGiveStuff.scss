@@ -1,0 +1,13 @@
+.formGiveStuffMain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .formGiveStuffHeader{
+        margin-right: 220px;
+        width: 100%;
+        max-width: 1600px;
+    }
+}

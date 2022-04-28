@@ -1,0 +1,27 @@
+.containLogout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    h2{
+        font-family: $font-base;
+        color: $color-text;
+        font-size: 40px;
+    }
+    img{
+        margin: 30px 0 50px;
+    }
+    .logToMainPage{
+        font-family: $font-base;
+        font-size: 18px;
+        color: $color-text;
+        text-decoration: none;
+        border: 0.75px solid $color-text;
+        padding: 15px 25px;
+    }
+    .logToMainPage:hover{
+        color: $color-hover;
+        border-color: $color-hover;
+    }
+}
