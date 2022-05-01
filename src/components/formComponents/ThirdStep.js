@@ -49,24 +49,33 @@ const Third = ({ setStepNumber }) => {
                 </p>
             </div>
             <div className='thirdForm'>
-                <h3>Zaznacz co chcesz oddać:</h3>
-                {isChecked && <p>Uzupełnij formularz</p>}
-                <select value={location} onChange={handleNumberChange}>
-                    <option value="Wybierz">Wybierz</option>
-                    <option value="Poznań">Poznań</option>
-                    <option value="Kraków">Kraków</option>
-                    <option value="Warszawa">Warszawa</option>
-                    <option value="Wrocław">Wrocław</option>
-                    <option value="Gdańsk">Gdańsk</option>
-                </select>
-                <label htmlFor=""> Komu chcesz pomóc?
-                    <button data-check="whoHelp" value="dzieciom" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>dzieciom</button>
-                    <button data-check="whoHelp" value="samotnym matkom" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>samotnym matkom</button>
-                    <button data-check="whoHelp" value="bezdomnym" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>bezdomnym</button>
-                    <button data-check="whoHelp" value="niepełnosprawnym" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>niepełnosprawnym</button>
-                    <button data-check="whoHelp" value="osobom starszym" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>osobom starszym</button>
+                <h3>Lokalizacja</h3>
+                {isChecked && <p className='warning'>Uzupełnij formularz</p>}
+                <label htmlFor="">
+                    <select value={location} onChange={handleNumberChange}>
+                        <option value="Wybierz">Wybierz</option>
+                        <option value="Poznań">Poznań</option>
+                        <option value="Kraków">Kraków</option>
+                        <option value="Warszawa">Warszawa</option>
+                        <option value="Wrocław">Wrocław</option>
+                        <option value="Gdańsk">Gdańsk</option>
+                    </select>
                 </label>
-                <label htmlFor=""> Wpisz nazwę konkretnej orgnizacji
+                <label htmlFor="" ><p>Komu chcesz pomóc?</p>
+                    <div className='buttonsWhoHelp'>
+                        <div>
+                            <button data-check="whoHelp" value="dzieciom" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>dzieciom</button>
+                            <button data-check="whoHelp" value="samotnym matkom" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>samotnym matkom</button>
+                            <button data-check="whoHelp" value="bezdomnym" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>bezdomnym</button>
+                        </div>
+
+                        <div>
+                            <button data-check="whoHelp" value="niepełnosprawnym" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>niepełnosprawnym</button>
+                            <button data-check="whoHelp" value="osobom starszym" onClick={e => handleButtonWhoHelp(e.target.value, e.target)}>osobom starszym</button>
+                        </div>
+                    </div>
+                </label>
+                <label htmlFor=""> <p>Wpisz nazwę konkretnej orgnizacji</p>
                     <input type="text" onChange={e => setOrganization(e.target.value)} /></label>
                 <div>
                     <button onClick={() => backStep()}>Wstecz</button>

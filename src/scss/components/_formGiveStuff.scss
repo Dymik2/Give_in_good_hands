@@ -9,7 +9,6 @@
         width: 100%;
         max-width: 1600px;
         .imgBackgroundForm{
-            
             width: 50%;
             height: auto;
         }
@@ -25,7 +24,8 @@
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        padding: 45px 60px;
+        max-width: 1600px;
+        padding: 45px 0;
         background-color: $background_section_statistic_border;
         h3{
             display: block;
@@ -34,11 +34,19 @@
             font-weight: 600;
             color: $color_bottom_contact;
             margin-bottom: 15px;
+            margin-left: 60px;
         }
         p{
             font-family: $font-base;
             font-size: 22px;
             color: $color_text;
+            margin-left: 60px;
         }
+    }
+    .warning{
+        display: block;
+        font-size: 20px;
+        margin:20px 60px 10px;
+        color: red;
     }
 }

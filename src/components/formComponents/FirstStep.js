@@ -43,7 +43,7 @@ const FirstStep = ({ setStepNumber }) => {
             </div>
             <div className='firstForm'>
                 <h3>Zaznacz co chcesz oddać:</h3>
-                {isChecked && <p style={{ color: "red" }}>Zaznacz przynajmniej jedną opcję</p>}
+                {isChecked && <p className='warning'>Zaznacz przynajmniej jedną opcję</p>}
                 <form onSubmit={handleSubmit(onSubmit)} >
                     <label htmlFor="">
                         <p>Ubrania, które nadają się do ponownego użycia</p>

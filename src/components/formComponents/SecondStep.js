@@ -34,16 +34,19 @@ const SecondStep = ({ setStepNumber }) => {
                 </p>
             </div>
             <div className='secondForm'>
-                <h3>Zaznacz co chcesz oddać:</h3>
+                <h3>Podaj w ile worków chcesz się spakować:</h3>
                 {/* {isChecked && <p>Zanzacz przynajmniej jedną opcję</p>} */}
-                <select value={numberBag} onChange={handleNumberChange}>
-                    <option value="Wybierz">Wybierz</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
+                <label htmlFor="">
+                    <p>Liczba 60l worków: </p>
+                    <select value={numberBag} onChange={handleNumberChange}>
+                        <option value="Wybierz">Wybierz</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </label>
                 <div>
                     <button onClick={() => backStep()}>Wstecz</button>
                     <button onClick={() => onSubmit()}>Dalej</button>
