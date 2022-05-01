@@ -1,5 +1,6 @@
 import React from 'react';
 import decoration from "../../assets/Decoration.svg";
+import '../../scss/main.scss';
 
 const HeaderForm = () => {
     return (
