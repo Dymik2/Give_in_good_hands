@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { editStuff } from '../../Redux/actions/stuffActions'
+    ;
+import { useSelector } from 'react-redux';
 import '../../scss/main.scss';
 
 const SecondStep = ({ setStepNumber }) => {
     //const [isChecked, setIsChecked] = useState(true);
+    const { stuff } = useSelector(store => store);
     const [numberBag, setNumberBag] = useState();
+    const dispatch = useDispatch();
 
     const handleNumberChange = (e) => {
         setNumberBag(e.target.value);
@@ -11,7 +17,6 @@ const SecondStep = ({ setStepNumber }) => {
 
     const backStep = () => {
         setStepNumber(prev => prev - 1);
-        console.log("test");
     }
 
     const onSubmit = () => {
@@ -22,7 +27,8 @@ const SecondStep = ({ setStepNumber }) => {
         else {
             //  setIsChecked(true);
         }
-        console.log("test2");
+
+        dispatch(editStuff({ quantity: numberBag, stuff: stuff[1].stuff }))
     }
 
     return (

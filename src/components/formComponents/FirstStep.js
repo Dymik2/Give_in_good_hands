@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { useDispatch } from 'react-redux';
+import { addStuff } from '../../Redux/actions/stuffActions'
 import '../../scss/main.scss';
 
 const FirstStep = ({ setStepNumber }) => {
     const [chooseStuff, setChooseStuff] = useState([]);
     const [isChecked, setIsChecked] = useState(false);
+    const dispatch = useDispatch();
 
     const {
         handleSubmit,
@@ -19,7 +22,7 @@ const FirstStep = ({ setStepNumber }) => {
             setIsChecked(false);
             setStepNumber(prev => prev + 1);
         }
-        console.log(chooseStuff);
+        dispatch(addStuff({ stuff: chooseStuff }))
     };
 
     const handleChooseStuff = (stuff, isChecked) => {

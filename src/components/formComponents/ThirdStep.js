@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { editStuff } from '../../Redux/actions/stuffActions'
+    ;
+import { useSelector } from 'react-redux';
 import '../../scss/main.scss';
 
 const Third = ({ setStepNumber }) => {
@@ -6,6 +10,8 @@ const Third = ({ setStepNumber }) => {
     const [location, setLocation] = useState();
     const [personHelp, setPersonHelp] = useState();
     const [organization, setOrganization] = useState();
+    const { stuff } = useSelector(store => store);
+    const dispatch = useDispatch();
 
     const handleNumberChange = (e) => {
 
@@ -16,29 +22,25 @@ const Third = ({ setStepNumber }) => {
         const buttons = document.querySelectorAll(`[data-check="whoHelp"]`);
         buttons.forEach(el => {
             el.classList.remove("checkedbutton");
-            console.log(el);
         })
         btn.classList.add("checkedbutton");
-        console.log(btn);
         setPersonHelp(person);
-        console.log(person);
     }
 
     const backStep = () => {
         setStepNumber(prev => prev - 1);
-        console.log("test");
     }
 
     const onSubmit = () => {
         if (location !== undefined && personHelp !== undefined && organization !== undefined) {
             setIsChecked(false);
-            console.log(`${location}, ${personHelp}, ${organization} `)
+            // console.log(`${location}, ${personHelp}, ${organization} `)
+            dispatch(editStuff({ quantity: stuff.quantity, stuff: stuff.stuff, people: personHelp, location: location, organization: organization }))
             setStepNumber(prev => prev + 1);
         }
         else {
             setIsChecked(true);
         }
-        console.log("test2");
     }
     return (
         <div className='thirdStep'>

@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { useDispatch } from 'react-redux';
+import { editStuff } from '../../Redux/actions/stuffActions'
+    ;
+import { useSelector } from 'react-redux';
 import '../../scss/main.scss';
 
 const FourthStep = ({ setStepNumber }) => {
+    const { stuff } = useSelector(store => store);
+    const dispatch = useDispatch();
+    console.log(stuff);
 
     const {
         register,
@@ -12,14 +19,15 @@ const FourthStep = ({ setStepNumber }) => {
 
     const backStep = () => {
         setStepNumber(prev => prev - 1);
-        console.log("test");
     }
     const onSubmit = async (data) => {
-
         console.log(data);
+        dispatch(editStuff({ quantity: stuff.quantity, stuff: stuff.stuff, people: stuff.people, location: stuff.location, organization: stuff.organization, adress: [data.street, data.town, data.ZIPcode, data.telNumber], time: [data.data, data.time, data.description] }))
         setStepNumber(prev => prev + 1);
+
         //  navigate("/login");
     }
+
     return (
         <div className='fourthStep'>
             <div className='warnDiv'>
@@ -69,7 +77,7 @@ const FourthStep = ({ setStepNumber }) => {
                             {errors.time?.type === 'required' && <p style={{ color: "red" }}>Godzina jest wymagana</p>}
                             <label htmlFor="">
                                 <p>Uwagi dla kuriera</p>
-                                <input type="textarea" />
+                                <input type="textarea" {...register("description", { required: false })} />
                             </label>
                         </div>
                     </div>
