@@ -69,7 +69,13 @@
     .formInput{
         div{
             margin: 40px 0;
-            margin-right: 70px;
+            margin-right: 70px;   
+        }
+
+        .textArea{
+            height: 4.5rem;
+            font-size: 20px;
+            resize: none;
         }
     }
 }

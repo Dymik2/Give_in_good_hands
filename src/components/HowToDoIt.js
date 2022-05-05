@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import '../scss/main.scss';
 import decoration from "../assets/Decoration.svg";
 import tshirt from "../assets/Icon-1.png";
@@ -8,6 +9,7 @@ import loupe from "../assets/Icon-3.png";
 import recycle from "../assets/Icon-4.png";
 
 const HowToDoIt = () => {
+    const { log } = useSelector(state => state);
     return (
         <div className='howToDoIt'>
             <div className='title'>
@@ -43,7 +45,7 @@ const HowToDoIt = () => {
                     </div>
                 </div>
             </div>
-            <Link className='link' to="/login">Oddaj rzeczy</Link>
+            {log.length > 0 ? <Link className='link' to="/formgivestuff">Oddaj rzeczy</Link> : <Link className='link' to="/login">Oddaj rzeczy</Link>}
         </div>
     );
 }

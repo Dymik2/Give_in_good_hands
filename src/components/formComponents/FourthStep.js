@@ -77,7 +77,7 @@ const FourthStep = ({ setStepNumber }) => {
                             {errors.time?.type === 'required' && <p style={{ color: "red" }}>Godzina jest wymagana</p>}
                             <label htmlFor="">
                                 <p>Uwagi dla kuriera</p>
-                                <input type="textarea" {...register("description", { required: false })} />
+                                <textarea className='textArea' type="textarea" rows="4"   {...register("description", { required: false })} />
                             </label>
                         </div>
                     </div>
